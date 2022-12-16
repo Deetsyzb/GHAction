@@ -39,3 +39,12 @@ jobs:
       - name: Runs a verbose Go test
         run: |
           go test -v
+      - name: CINotify Email
+        uses: cinotify/github-action@v1.1.0
+        with:
+    # Recipient email address
+           to: d.shawnyeo@gmail.com
+    # Email subject
+           subject: Push notification
+    # Email body
+           body: Github workflow of GHAction Repo completed
